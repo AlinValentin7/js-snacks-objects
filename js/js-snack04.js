@@ -1,29 +1,40 @@
-/**Crea un array di oggetti che rappresentano degli animali.
-Ogni animale ha un nome, una famiglia e una classe.
+/**Crea un array di oggetti che rappresentano delle persone.
+Ogni persona ha un nome, un cognome e un’età.
+Crea quindi un nuovo array inserendo, 
+per ogni persona, una frase con il nome e cognome 
+e l’indicazione se può guidare, in base all’età. */
 
-Crea un nuovo array con la lista dei mammiferi.*/
+console.log('snack4')
 
-const animals = [
-    { nome: 'leone', famiglia: 'felini', classe: 'mammiferi' },
-    { nome: 'cane', famiglia: 'canidi', classe: 'mammiferi' },
-    { nome: 'gallina', famiglia: 'fasianidi', classe: 'uccelli' },
-    { nome: 'ragno', famiglia: 'aracnidi', classe: 'insetti'},
-    { nome: 'serpente', famiglia: 'colubridi', classe: 'rettili'}
-  ]
+const persone =  [
+    {nome: 'Anna', cognome: ' Pepe', eta: 24, },
+    {nome: 'Maurizio', cognome: ' Pisciotto', eta: 40, },
+    {nome: 'Davide', cognome: ' de Luca', eta: 83, },
+    {nome: 'Piero', cognome: ' Botrugno', eta: 17, },
+    {nome: 'Rino', cognome: ' Ceronte', eta: 61, },
+    {nome: 'Lara', cognome: ' Gazza', eta: 18, },
+]
 
-const mammiferi = []
-const altreSpecie = []
-for(let i = 0; i < animals.length; i++ ){
-    const animalsCategory = animals[i]
-    const classe = animalsCategory.classe
-    if(classe === 'mammiferi'){
-       mammiferi.push(animalsCategory)
+const Patente = []
+
+
+for(let i = 0; i < persone.length; i++){
+    const persona = persone [i]
+    const eta = persona.eta
+    const nome = persona.nome
+    const cognome = persona.cognome
+    let mesaggio
     
+    if(eta >= 18 ) {
+        mesaggio = nome +  cognome + ' puo giudare ha ' + eta
     }
     else {
-        altreSpecie.push(animalsCategory)
+        mesaggio = nome +  cognome + ' non puo giudare ha ' + eta
     }
-
+   Patente.push(mesaggio)  
+  
 }
-console.log(mammiferi)
-console.log(altreSpecie)
+
+
+console.log(Patente)
+
